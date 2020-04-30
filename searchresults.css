@@ -1,0 +1,127 @@
+.main-bg {
+    width: 100%;
+    background-color: #D9F2E8;
+    padding-top: 6em;
+    padding-bottom: 4.3em;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+.menubar {
+    display: none;
+}
+
+/* SEARCH RESULTS RECIPE */
+.results-container {
+    position: absolute;
+    z-index: 1;
+    top: 10em;
+}
+.results-container a {
+    text-decoration: none;
+    color: black;
+}
+.result {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: 
+    "pic txt"
+    "pic .";
+    padding: 15px;
+    margin: 15px;
+    height: 100%;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 23px;
+    box-shadow: 0px 2px 28px 0px #c7c7c7;
+}
+.pic img {
+    width: 100%;
+}
+.icons {
+    display: flex;
+    justify-content: end;
+}
+.icons img {
+    height: 20px;
+}
+.text {
+    align-self: start;
+    grid-area: txt;
+    text-align: end;
+    padding-left: 10px;
+    
+}
+.pic {
+    grid-area: pic;
+}
+
+@media (min-width:37.5em) {
+    .result {
+        margin: 0;
+    }
+    .one {
+        grid-area: one;
+    }
+    .two {
+        grid-area: two;
+    }.three {
+        grid-area: three;
+    }.four {
+        grid-area: four;
+    }
+    .results-container {
+        margin: 3em 30px 0;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "one two"
+        "three four";
+    }
+    .icons p {
+        font-size: 0.7em;
+    }
+}
+
+@media (min-width: 62.5em){
+    .main-bg {
+        display: none;
+    }
+    .menubar {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #E7F4EF;
+        padding: 0 129px;
+        margin-bottom: 5em;
+    }
+   
+    .mylist a{
+        font-size: 2em;
+        text-decoration: none;
+        color: #300D3C;
+    }
+    .leftlogo {
+        display: flex;
+        align-items: center;
+    }
+    .leftlogo img {
+        height: 100px;
+        margin: 20px 10px 20px 0;  
+    }
+    .leftlogo p {
+        font-size: 2em;
+    }
+    .results-container {
+        margin: 3em 30px 0;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "one two three four";    }
+}

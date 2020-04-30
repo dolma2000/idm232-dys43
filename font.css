@@ -1,0 +1,24 @@
+@font-face {
+    font-family: quicksand;
+    src: url(font/Quicksand-Regular.otf) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: quicksand-bold;
+    src: url(font/Quicksand-Bold.otf) format('woff2');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: centurygothic;
+    src: url(font/gothic.ttf) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: centurygothic-bold;
+    src: url(font/gothicb.ttf) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,357 @@
+.menubar {
+    display: none;
+}
+.header-image {
+    position: absolute;
+    top: 0;
+}
+.header-image img{
+    width: 100%;
+}
+.afterheader {
+    position: absolute;
+    top: 22em;
+}
+.header {
+    text-align: start;
+    margin: 30px;
+    color: #300D3C;
+}
+#title p{
+    font-size: 1.5em;
+}
+#subtitle p{
+    font-size: 1em;
+}
+.icons{
+    margin: 2em 30px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.icons div{
+    display: flex;
+    align-content: center;
+}
+.icons img{
+    height: 28px;
+}
+.icons p {
+    position: relative;
+    top: 6px;
+    left: 5px;
+}
+
+/* DESCRIPTIONS */
+.description {
+    margin: 30px;
+    line-height: 24px;
+    font-size: 0.9em;
+}
+
+/* INGREDIENTS */
+.ingredient {
+    margin-bottom: 2em;
+}
+.ingredient h1{
+    margin-left: 0;
+    font-size: 1.5em;
+    background-color: #E7F4EF;
+    width: 50%;
+    padding: 10px 0 10px 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px; 
+}
+.ing-pic{
+    text-align: center;
+    margin-top: 2em;
+}
+.ing-pic img{
+    width: 80%;
+}
+.ingredient-info {
+    margin: 0 30px 4em;
+}
+.ingredient-info hr{
+    border: 0.05px solid rgb(231, 231, 231);
+    text-align: center;
+    width: 99%;
+    margin: 5px 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 95% 5%;
+    grid-template-rows: auto;
+    grid-template-areas: "ing no";
+}
+.item {
+    grid-area: ing;
+}
+.no {
+    grid-area: no;
+}
+
+/* INSTRUCTION */
+.instruction h1{
+    margin-left: 0;
+    font-size: 1.5em;
+    background-color: #E7F4EF;
+    width: 50%;
+    padding: 10px 0 10px 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px; 
+}
+#exp-col {
+    margin: 1em 19px;
+    cursor: pointer;
+}
+#exp {
+    background-color: #FFCC79;
+    text-align: center;
+    border-radius: 5px;
+    color: white; 
+    width: 100%;
+    transition: 1s all ease;
+    border: 3px solid #FFCC79;
+    cursor: pointer;
+}
+#exp p{
+    padding: 9px 0;
+    letter-spacing: 1px;
+}
+#col {
+    background-color: white;
+    text-align: center;
+    border: 3px solid #FFCC79;
+    border-radius: 5px;
+    color: #FFCC79;
+    width: 100%;
+    cursor: pointer;
+}
+#col p{
+    padding: 9px 0;
+    letter-spacing: 1px;
+}
+.steps {
+    background-color:#F8F8F8;
+    padding: 3px 19px;
+    width: 100%;
+}
+.step {
+    background-color: white;
+    margin: 0.5em 4px;
+    border-radius: 5px;
+}
+.step p {
+    padding: 9px 15px;
+}
+.inside img{
+    width: 100%;
+}
+.inside p{
+    line-height: 1.4em;
+    padding-bottom: 1em;
+}
+.headerimg {
+   display: none;
+}
+@media (min-width: 37.5em) {
+    .afterheader {
+        position: unset;
+    }
+    .header-image {
+        display: none;
+    }
+    .headerimg {
+        grid-area: headerimg;
+        display: block;
+    }
+    .headerimg img {
+        width: 100%;
+    }
+    .header {
+        grid-area: header;
+    }
+    .icons {
+        grid-area: icons;
+    }
+    .description {
+        grid-area: desc;
+    }
+    .side {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "headerimg header"
+        "headerimg icons"
+        "headerimg desc";
+        margin: 45px;
+        align-items: start;
+    }
+    /* INGREDIENT */
+    .ingredient h1{
+        padding-left: 45px;
+        width: 30%;
+    }
+    .ing-pic img{
+        grid-area: pic;
+        width: 100%;
+        padding-left: 20px;
+    }
+    .ingredient-info {
+        grid-area: no;
+        margin: 0;
+    }
+    .side2 {
+        display: grid;
+        grid-template-columns:40% 60%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "no pic";
+        align-items: start;
+        margin: 0 45px;
+    }
+    .step {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media (min-width: 62.5em){
+    .hamburger {
+        display: none;
+    }
+    .hamburger-bg {
+        display: none;
+    }
+    .menubar {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #E7F4EF;
+        padding: 0 129px;
+        margin-bottom: 5em;
+    }
+   
+    .mylist a{
+        font-size: 2em;
+        text-decoration: none;
+        color: #300D3C;
+    }
+    .leftlogo {
+        display: flex;
+        align-items: center;
+    }
+    .leftlogo img {
+        height: 100px;
+        margin: 20px 10px 20px 0;  
+    }
+    .leftlogo p {
+        font-size: 2em;
+    }
+    .side {
+        grid-template-columns: 45% 55%;
+        grid-template-rows: auto auto auto;
+        grid-gap: 3.5em;
+        grid-template-areas: 
+        "headerimg header"
+        "headerimg icons"
+        "headerimg desc";
+        margin: 0 200px 0 129px;
+        align-items: start;
+    }
+    #title p {
+        font-size: 5em;
+    }
+    #subtitle p {
+        font-size: 3em;
+    }
+    .icons {
+        padding-right: 20em;
+    }
+    .icons img{
+        height:47px;
+    }
+    .icons p {
+        font-size: 2em;
+    }
+    .description p{
+        font-size: 1.8em;
+        line-height: 2em;
+    }
+    .ingredient h1 {
+        margin-top: 4em;
+        padding: 20px 129px;
+        font-size: 3em;
+        width: 20%;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px; 
+    }
+    .ing-pic img{
+        padding: 0 60px 0 80px;
+    }
+    .ingredient-info {
+        grid-area: no;
+        margin: 0;
+    }
+    .side2 {
+        display: grid;
+        grid-template-columns:40% 60%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "no pic";
+        align-items: start;
+        margin: 0 129px;
+    }
+    .ingredient-info {
+        margin-top: 3em;
+    }
+    .grid p {
+        font-size: 1.8em;
+        line-height: 2em;
+    }
+    .instruction h1{
+        margin-top: 2em;
+        padding: 20px 129px;
+        font-size: 3em;
+        width: 20%;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px; 
+    }
+    .steps p {
+        font-size: 1.5em;
+    }
+    .steps {
+        /* padding-top: 2em; */
+        padding: 0 129px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "one two"
+        "three four"
+        "four five"
+        "six .";
+    }
+    .one {
+        grid-area: one ;
+    }
+    .two {
+        grid-area: two;
+    }
+    .three {
+        grid-area: three;
+    }
+    .four {
+        grid-area: four;
+    }
+    .five {
+        grid-area: five;
+    }
+    .six {
+        grid-area: six;
+    }
+}
