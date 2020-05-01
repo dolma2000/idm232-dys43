@@ -189,7 +189,7 @@
         margin: 45px;
         align-items: start;
     }
-    /* INGREDIENT */
+    INGREDIENT
     .ingredient h1{
         padding-left: 45px;
         width: 30%;
@@ -212,10 +212,10 @@
         align-items: start;
         margin: 0 45px;
     }
-    .step {
+    /* .step {
         width: 80%;
         margin: 0 auto;
-    }
+    } */
     
 }
 
@@ -321,21 +321,26 @@
         border-bottom-right-radius: 50px;
         border-top-right-radius: 50px; 
     }
+    #exp-col{
+        margin: 2em 129px;
+        width: 30%;
+    }
     .steps p {
         font-size: 1.5em;
+        padding: 12px 30px;
     }
     .steps {
-        /* padding-top: 2em; */
-        padding: 0 129px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "one two"
         "three four"
-        "four five"
-        "six .";
+        "five six";
+        grid-gap: 10px;
+        padding: 2em 129px;
     }
+   
     .one {
         grid-area: one ;
     }
@@ -353,5 +358,5 @@
     }
     .six {
         grid-area: six;
-    }
+    } 
 }
