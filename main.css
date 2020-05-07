@@ -10,55 +10,66 @@ html {
     margin: 0;
 }
 
-nav {
-    z-index: 10;
-  }
-  .nav-links {
-      position: absolute;
-      top: 0;
-      border-bottom-right-radius: 50px;
-      background-color:white;
-      display: block;
-      padding-left: 0;
-      padding-bottom: 4em;
-      padding-top: 6em;
-      width: 14em;
-      transform: translateX(-100%);
-      transition: transform 0.5s;
-      z-index: 5;
-    }
-    .nav-links li {
-      margin-left: 2.6em;
-      padding-top: 2em;
-      color: #504844;
-      font-family: 'Quicksand';
-      }
-    .nav-links a {
-      text-decoration: none;
-      list-style: none;
-      font-size: 1.3em;
-    }
-    .nav-active {
-      transform: translateX(0%);
-      box-shadow: 0px 0px 10px rgb(219, 213, 213);
-    }
+/* HAMBURGER MENU BAR ANIMATION */
+.nav-links {
+    overflow-y: hidden;
+}
+.nav-links div {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 1vw;
+    height: 1vh;
+    background-color:hsla(0, 0%, 0%, 0.0);
+    border-bottom-right-radius: 1000px;
+    transition: all ease 1s;
+    transition-delay: 0.1s;
+}
+.nav-links ul {
+    background-color: #F7BE6A;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-bottom-right-radius: 1000px;
+    transition: all ease 1s;
+}
+.nav-links ul a {
+    text-decoration: none;
+}
+.nav-links ul li{
+    color: white;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    font-size: 0em;
+    line-height: 2em;
+    position: relative;
+    top: 33%;
+    left: 49%;
+    transform: translate(-60%,-50%);
+    opacity: 0;
+    transition: all ease 1s;    
+}
+.nav-active div{
+    width: 1000px;
+    height: 1000px;
+    backdrop-filter: blur(20px);
+    background-color:hsla(0, 0%, 0%, 0.3);
+    transition-delay: none;
+}
+.nav-active ul{
+    width:700px;
+    height: 700px;
+    transition-delay: 0.1s;
+}
+.nav-active ul li {
+    font-size: 1.7em;
+    opacity: 1;
+    transform: translate(-77%,0%);
+}
 
-    .burger div {
-        width: 37px;
-        height: 5px;
-        border-radius: 3px;
-        background-color: #9B948C;
-        margin: 7px;
-    }
-    
-    .burger {
-        display: block;
-        margin: 1em 0 0 1em;
-        z-index: 10;
-        position: absolute;
-        top: 0;
-        color: #9B948C
-      }
 
 
 /* SEARCH BAR */
@@ -79,12 +90,79 @@ nav {
 }
 
 @media (min-width:37.5em) {
+    .nav-links div {
+        border-bottom-right-radius: 1000px;
+        transition: all ease 1s;
+        transition-delay: 0.1s;
+    }
+    .nav-links ul {
+        transition: all ease 1s;
+        border-bottom-right-radius: 200px;
+    }
+    .nav-links ul li{
+        text-align: left;
+        line-height: 2.6em;
+        transform: translate(-60%,-50%);
+        margin-left: 1.3em;   
+    }
+    .nav-active div{
+        width: 1000px;
+        height: 1000px;
+        backdrop-filter: blur(20px);
+        background-color:hsla(0, 0%, 0%, 0.3);
+        transition-delay: none;
+    }
+    .nav-active ul{
+        width:40vw;
+        height: 50vh;
+        transition-delay: 0.1s;
+    }
+    .nav-active ul li {
+        font-size: 1.7em;
+        opacity: 1;
+    }
     .searchbar {
         margin: 30px;
     }
 }
 
 @media (min-width: 62.5em){
+    .hamburger {
+        display: none;
+    }
+    .hamburger-bg {
+        display: none;
+    }
+    .nav-links {
+        display: none;
+    }
+    /* MENU BAR */
+    .desktop-nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 2em 3em;
+        text-align: center;
+    }
+    .desktop-nav a {
+        text-align: center;
+        padding: 0 1em;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #300D3C;
+        font-weight:100;
+        letter-spacing: 1px;
+        margin: 0 0.5em;
+        padding: 0.5em 1em;
+        transition: all ease 0.5s;
+        border-radius: 40px;
+    }
+    .desktop-nav a:hover {
+        background-color:hsla(156, 49%, 90%, 0.767);
+        border-radius: 40px;
+        padding: 0.5em 1em;
+    }
     .searchbar {
         margin: 0 auto;
         width: 40%;
@@ -94,8 +172,5 @@ nav {
     }
     .searchbar img {
         width: 28px;
-    }
-    .burger {
-        display: none;
     }
 }

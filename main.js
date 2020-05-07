@@ -1,31 +1,35 @@
 
-  // // Look for .hamburger
-  // var hamburger = document.querySelector(".hamburger");
-  // // On click
-  // hamburger.addEventListener("click", function() {
-  //   // Toggle class "is-active"
-  //   hamburger.classList.toggle("nav-active");
-  //   // Do something else, like open/close menu
-  //   });
 
-    const navSlide = () => {
+    // HAMBURGER ICON ANIMATION
+  const hamburger = document.querySelector(".hamburger");
+  // On click
+  hamburger.addEventListener("click", function() {
+    // Toggle class "is-active"
+    hamburger.classList.toggle("is-active");
+    hamburger.classList.toggle("slide");
+    // Do something else, like open/close menu
+  });
 
-      const burger = document.querySelector('.burger');
-      const nav = document.querySelector('.nav-links');
-      
-      burger.addEventListener('click', () => {
-          nav.classList.toggle('nav-active')
-      });
-      }
-      
-      navSlide();
+  // MENU SLIDE IN 
+  const navSlide = () => {
+
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active')
+    });
+    }
+    
+    navSlide();
+
+ 
 
   const expcol = document.getElementById('exp-col');
   const expand = document.getElementById('exp');
   const collapse = document.getElementById('col');
 
-  // const inside=document.querySelectorAll('.inside');
-  // inside[0].style.display='none';
+  
 
   var inside = document.getElementsByClassName("inside");
   var i;

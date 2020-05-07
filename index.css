@@ -1,28 +1,76 @@
-.mylist {
+.desktop-nav {
     display: none;
+}
+.dish {
+    border-radius: 2px solid black;
 }
 .dish img {
     width: 160px;
-    height: 160px;
+    height: 160px;  
 }
+
+.mini-icon img {
+    position: absolute;
+    width: 13%;
+    max-width: 50px;
+}
+#avocado {
+    top: 50px;
+    right: 20px;
+    transform: rotate(15deg);
+}
+#spinach {
+    max-width: 40px;
+    top:100px;
+    left: 20px;
+    transform: rotate(-15deg);
+}
+#mushroom {
+    top:300px;
+    left: 90px;
+    transform: rotate(35deg);
+}
+#onion {
+    max-width: 30;
+    top:220px;
+    right: 50px;
+    transform: rotate(-15deg);
+}
+#garlic {
+    max-width: 30px;
+    top:410px;
+    right: 8%;
+    transform: rotate(15deg);
+}
+#lemon {
+    max-width: 30px;
+    top:-30px;
+    right: 50%;
+    transform: rotate(15deg);
+}
+
 #one {
     position: absolute;
+    z-index: 0;
     top: -80px;
     right: -80px;
 }
 #two {
     position: absolute;
+    z-index: 0;
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
 }
 #three {
     position: absolute;
+    z-index: 0;
     top: 230px;
     left: -80px;
 }
 #four {
     position: absolute;
+    z-index: 0;
     top: 230px;
     right: -80px;
     transform: rotate(280deg);
@@ -31,8 +79,8 @@
     display: none;
 }
 .logo img {
-    position: absolute;
-    top: 350px;
+    margin: 22em auto 0;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 170px;
@@ -41,9 +89,11 @@
 
 /* FOOD CATEGORIES */
 .main-bg {
+    position: relative;
+    z-index: -1;
+    top: -75px;
     width: 100%;
     background-color: #D9F2E8;
-    margin-top: 26em;
     padding-bottom: 1px;
     padding-top: 90px;
 }
@@ -68,9 +118,9 @@
 }
 .categories-grid {
     font-weight: bold;
-    margin: 15px;
+    margin: 20px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     justify-items: end;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto;
@@ -78,13 +128,13 @@
     "vegan dinner"
     "salad potluck"
     "asian mexican"
-    "italian .";
+    "italian random";
     justify-items: center;
 }
 .categories-grid p {
-    text-shadow: 0px 0px 6px black;
+    text-shadow: 2px 2px 20px rgb(0, 0, 0);
     letter-spacing: 2px;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 .vegan {
     grid-area: vegan;
@@ -107,8 +157,71 @@
 .italian {
     grid-area: italian;
 }
+.random {
+    grid-area: random;
+}
 
 @media (min-width:37.5em) {
+    .dish img {
+        width: 100%;
+        max-width: 145px;
+        height: unset;
+    }
+    .dish {
+        justify-items: center;
+        margin: 2em 2.5em 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". . three . ."
+        ". two . four ."
+        "one . . . five";
+    }
+    #one {
+        grid-area: one;
+        position: relative;
+        z-index: 0;
+        top: -40px;
+        right: -10px;
+    }
+    #two {
+        grid-area: two;
+        position: relative;
+        z-index: 0;
+        top: -55px;
+        left: -30px;
+        transform: unset;
+    }
+    #three {
+        grid-area: three;
+        position: relative;
+        z-index: 0;
+        top: unset;
+        left: unset;
+    }
+    #four {
+        grid-area: four;
+        position: relative;
+        z-index: 0;
+        top:-55px;
+        right:-30px;
+        transform: unset;
+    }
+    #five {
+        grid-area: five;
+        position: relative;
+        z-index: 0;
+        top:-40px;
+        right:10px;
+        display: block;
+    }
+    .logo img {
+        margin-top: -6em;
+    }
+    .main-bg {
+        margin-top: -10px;
+    }
     .categories-grid {
         margin: 30px;
         grid-gap: 20px;
@@ -118,27 +231,19 @@
         grid-template-areas: 
         "vegan dinner salad"
         "potluck asian mexican"
-        ". italian . "
+        ". italian random "
+    }
+    .italian{
+        transform: translateX(-50%);
+    }
+    .random {
+        transform: translateX(-50%);
     }
 }
 
 @media (min-width: 62.5em){
-    .hamburger {
-        display: none;
-    }
-    .hamburger-bg {
-        display: none;
-    }
-    .mylist {
-        position: absolute;
-        top: 30px;
-        right: 100px;
-        font-size: 1.5em;
-        display: block;
-    }
-    .mylist a {
-        text-decoration: none;
-    }
+
+   /* BANNER DESIGN */
     .categories-grid {
         margin: 30px 129px;
         grid-gap: 35px;
@@ -147,23 +252,29 @@
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
         "vegan dinner salad potluck"
-        "asian mexican italian ."
-        }
-     .main{
+        "asian mexican italian random"
+    }
+    .italian{
+        transform: unset;
+    }
+    .random {
+        transform: unset;
+    }
+
+
+    /* FOOD CATEGORIES WITH LOGO*/
+    .main{
          margin: 0 40px;
      }   
     .main-bg {
         padding-top: 7em;
-        margin: 0 0em;
         border-radius: 20px;
     }
     .logo img{
         width: 190px;
-        top: 410px;
     }
     .dish img {
-        width: 180px;
-        height: 180px;
+        max-width: 180px;
     }
     .dish {
         justify-items: center;
@@ -178,36 +289,42 @@
     }
     #one {
         position: relative;
-        top:-40px;
-        right: 0px;
+        top:-20px;
+        left: 10px;
         grid-area: one;
     }
     #two {
         grid-area: two;
         position: relative;
-        top: -60px;
-        left: -40px;
+        top: -40px;
+        left: -50px;
         transform: unset;
     }
     #three {
         position: relative;
-        top: 30px;
+        top: 45px;
         left:0px;
         grid-area: three;
     }
     #four {
         grid-area: four;
         position: relative;
-        top: -60px;
-        right: -40px;
+        top: -40px;
+        right: -50px;
         transform: unset;
     }
     #five {
         grid-area: five;
         display: block;
         position: relative;
-        top:-40px;
-        right: 0px;
+        top:-20px;
+        right: 10px;
     }
 
+    .categories-grid img {
+        box-shadow: 2px 1px 10px 2px #c0c0c0;
+    }
+    .categories-grid:hover{
+        transform: scale(1.1);
+    }
 }
