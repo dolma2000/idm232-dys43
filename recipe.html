@@ -1,3 +1,7 @@
+<?php 
+    include "includes/database.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,8 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+
     <!-- HAMBURGER MENU BAR -->
    <button class="hamburger hamburger--squeeze" type="button">
     <span class="hamburger-box">
@@ -22,9 +28,12 @@
 <div class="nav-links">
    <div></div>
     <ul>
-        <a href="index.html"><li>Home</li></a>
-        <a href="mylist.html"><li>My List</li></a>
-        <a href="FAQ.html"><li>Help</li></a>
+        <div>
+            <a href="index.html"><li>Home</li></a>
+            <a href="mylist.html"><li>My List</li></a>
+            <a href="FAQ.html"><li>Help</li></a>
+        </div>
+        
     </ul>
 </div>
 
@@ -58,7 +67,7 @@
         <div class="side">
 
             <div class="headerimg">
-                <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpeg" alt="">
+                <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="">
             </div>
             <div class="header" >
                 <div id="title"><p><b>Ancho Orange Chicken</b></p></div>
@@ -226,6 +235,10 @@
 
 
 <script src="main.js"></script>
+
+<?php
+    mysqli_close($connection);
+?>
 
 </body>
 </html>

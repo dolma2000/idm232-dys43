@@ -11,6 +11,32 @@
 </head>
 <body>
 
+<?php 
+    include "includes/_header.php";
+    include "includes/functions.php"
+?>
+
+ <!-- PHP FOR RANDOM RECIPE - Same Recipe.php Template but random id parameter -->
+
+ <?php $link_name = "Recipe"; ?>
+
+<!-- <ul>
+<?php
+  for ($i=1; $i < 5; $i++) {
+    echo "<li>";
+    echo "<a href=\"recipe.php?id={$i}\">Recipe</a>";
+    echo "</li>";
+  }
+?>
+</ul> -->
+
+<!-- PHP FOR RANDOM RECIPE -->
+
+
+
+
+
+
     <!-- HAMBURGER MENU BAR -->
    <button class="hamburger hamburger--squeeze" type="button">
         <span class="hamburger-box">
@@ -32,8 +58,10 @@
    <!--INVISIBLE NAV BAR FOR DESKTOP SCREEN -->
     <div class="desktop-nav">
         <a href="" class="line">My List</a>
-        <a href="" class="line">Help</a> 
+        <a href="FAQ.html" class="line">Help</a> 
     </div>
+
+    
 
     <!-- BANNER DESIGN -->
 
@@ -59,11 +87,11 @@
     </div>
 
     <div class="dish">
-        <img id="one" src="IDM232-assets/images/Recipe_Thai_Curry_Chicken_with_Carrots_Bok_Choy/1218_2PRE07_Thai-Curry-Chicken_96739_WEB_SQ_hi_res copy.png" alt="">
-        <img id="two" src="IDM232-assets/images/Recipe_Beef_Medallions_Mushroom_Sauce_with_Mashed_Potatoes/0101_2PM_Steak-Diane_97315_SQ_hi_res copy.png" alt="">
-        <img id="three" src="IDM232-assets/images/Recipe_Bucatini_Alfredo_with_Broccoli/0101_2PV1_Broccoli-Bucatini-Fettuccine_97230_SQ_hi_res copy.png" alt="">
-        <img id="four" src="IDM232-assets/images/Recipe_HoneyButter_Barramundi_with_Zaatar_Roasted_Vegetables/0108_FPF_Barramundi_0304_WEB_SQ_hi_res copy.png" alt="">
-        <img id="five" src="IDM232-assets/images/Recipe_Roasted_Red_Pepper_Pasta_with_LemonParmesan_Broccoli/0108_2PV1_Roasted-Pepper-Pasta_97907_SQ_hi_res copy.png" alt="">
+        <img id="one" src="IDM232-assets/images/Recipe_Thai_Curry_Chicken_with_Carrots_Bok_Choy/1218_2PRE07_Thai-Curry-Chicken_96739_WEB_SQ_hi_res copy.png" alt="dish">
+        <img id="two" src="IDM232-assets/images/Recipe_Beef_Medallions_Mushroom_Sauce_with_Mashed_Potatoes/0101_2PM_Steak-Diane_97315_SQ_hi_res copy.png" alt="dish">
+        <img id="three" src="IDM232-assets/images/Recipe_Bucatini_Alfredo_with_Broccoli/0101_2PV1_Broccoli-Bucatini-Fettuccine_97230_SQ_hi_res copy.png" alt="dish">
+        <img id="four" src="IDM232-assets/images/Recipe_HoneyButter_Barramundi_with_Zaatar_Roasted_Vegetables/0108_FPF_Barramundi_0304_WEB_SQ_hi_res copy.png" alt="dish">
+        <img id="five" src="IDM232-assets/images/Recipe_Roasted_Red_Pepper_Pasta_with_LemonParmesan_Broccoli/0108_2PV1_Roasted-Pepper-Pasta_97907_SQ_hi_res copy.png" alt="dish">
     </div>
         
 
@@ -73,7 +101,7 @@
         <div class="logo">
                 <img src="images/natsu_logo_text_whiteborder.png" alt="">
         </div>
-        <div class="main-bg">
+        <div class="main-background">
             
             <div class="searchbar">
                 <form action="">
@@ -82,7 +110,7 @@
                 </form>
             </div>
             <div class="categories-grid">
-                <a href="searchresults.html" target="blank"><div class="box vegan">                    
+                <a href="searchresults.html"><div class="box vegan">                    
                     <img src="images/homepage/vegan.png" alt="vegan">
                     <div class="center"><p>VEGAN</p></div>
                 </div></a>
@@ -117,6 +145,11 @@
         </div>
     </div>
 
+
+
+<? php 
+include "includes/_footer.php";
+?>
     <script src="main.js"></script>
 </body>
 </html>

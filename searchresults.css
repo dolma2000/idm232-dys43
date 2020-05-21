@@ -1,8 +1,8 @@
 .main-bg {
     width: 100%;
     background-color: #D9F2E8;
-    padding-top: 6em;
-    padding-bottom: 4.3em;
+    padding-top: 5.5em;
+    padding-bottom: 5em;
     position: absolute;
     z-index: 0;
     top: 0;
@@ -11,117 +11,137 @@
     display: none;
 }
 
-/* SEARCH RESULTS RECIPE */
-.results-container {
-    position: absolute;
-    z-index: 0.5;
-    top: 10em;
-}
-.results-container a {
+
+/* UPDATED SEARCH RESULTS RECUPE */
+.result a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
-.result {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 70% 30%;
-    grid-template-areas: 
-    "pic txt"
-    "pic .";
-    padding: 15px;
-    margin: 15px;
-    height: 100%;
-    max-width: 100%;
-    background-color: white;
+.result-container {
+    position: relative;
+    top: 10em;
+    z-index: 0.5;
+    max-width: 418px;
+    padding: 1em;
+    width: 93%;
+    margin: 1em auto;
     border-radius: 23px;
+    background-color: white;
     box-shadow: 0px 2px 28px 0px #c7c7c7;
 }
-.pic img {
-    width: 100%;
+.result-grid{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-row: 2fr 1fr;
+    grid-template-areas: 
+    "dish name"
+    "dish icon";
 }
-.icons {
+.dish{
+    grid-area: dish;
+    justify-self: center;
+}
+.dish img{
+    width: 100%;
+    max-width: 180px;
+    transition: all ease-in-out 0.1s;
+}
+.dish img:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.2s;
+}
+.name{
+    grid-area: name;
+    align-self: flex-start;
+    padding-top: 5px;
+}
+.name p {
+    font-weight: bold;
+    text-align: end;
+}
+.icon {
     display: flex;
     justify-content: end;
+    align-self: center;
 }
-.icons img {
-    height: 20px;
-}
-.text {
-    align-self: start;
-    grid-area: txt;
-    text-align: end;
+.sub-icon {
+    grid-area: icon;
+    display: flex;
     padding-left: 10px;
-    
 }
-.pic {
-    grid-area: pic;
+.sub-icon img{
+    height: 23px;
+    margin-right: 3px;
+}
+.sub-icon p{
+    padding-top: 4px; 
+    font-size: 0.9em;   
 }
 
+
+
+
 @media (min-width:37.5em) {
+    .main-bg { 
+        padding-top: 1em;
+        padding-bottom: 12em;
+        position: absolute;
+        z-index: -1;
+        }
     .result {
-        margin: 0;
+        display: flex;
+        padding: 1em;
+        flex-wrap: wrap;
     }
-    .one {
-        grid-area: one;
+    .result-container{
+        margin-top: 8em;
+        max-height: 270px;
+        padding:1em;
+        width: 260px;
+        /* min-width: 216px; */
+        top: 4em;
     }
-    .two {
-        grid-area: two;
-    }.three {
-        grid-area: three;
-    }.four {
-        grid-area: four;
+    .result-grid{
+    grid-template-columns: 1fr;
+       grid-template-rows: 2fr 1fr 0.5fr ;
+       grid-template-areas: 
+       "dish"
+       "name"
+       "icon";
+       position:relative;
+       top: -110px;
     }
-    .results-container {
-        margin: 3em 30px 0;
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "one two"
-        "three four";
+    .dish img{
+        width: 100%;
+        max-width: 180px;
     }
-    .icons p {
-        font-size: 0.7em;
+    .name{
+        align-self: center;
+    }
+    .name p {
+        text-align: center;
+        padding: 0 1.5em;
+    }
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .result-container{
+        max-width: 300px;
     }
 }
 
 @media (min-width: 62.5em){
-    .main-bg {
-        display: none;
+    .main-bg { 
+    padding-top: 1.9em;
+    padding-bottom: 2em;
+    position: absolute;
+    z-index: -1;
     }
-    .menubar {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E7F4EF;
-        padding: 0 129px;
-        margin-bottom: 5em;
+    .result {
+        margin: 1em 1em 0;
     }
-   
-    .mylist a{
-        font-size: 2em;
-        text-decoration: none;
-        color: #300D3C;
-    }
-    .leftlogo {
-        display: flex;
-        align-items: center;
-    }
-    .leftlogo img {
-        height: 100px;
-        margin: 20px 10px 20px 0;  
-    }
-    .leftlogo p {
-        font-size: 2em;
-    }
-    .results-container {
-        margin: 3em 30px 0;
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-        "one two three four";    }
+
+
 }

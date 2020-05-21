@@ -1,12 +1,12 @@
 .desktop-nav {
     display: none;
 }
-.dish {
-    border-radius: 2px solid black;
-}
 .dish img {
     width: 160px;
     height: 160px;  
+}
+.dish img:hover {
+    transform: scale(1.1);
 }
 
 .mini-icon img {
@@ -88,7 +88,7 @@
 
 
 /* FOOD CATEGORIES */
-.main-bg {
+.main-background {
     position: relative;
     z-index: -1;
     top: -75px;
@@ -161,6 +161,12 @@
     grid-area: random;
 }
 
+#different a:hover {
+    background-color:hsla(156, 52%, 81%, 0.767);
+    border-radius: 40px;
+    padding: 0.5em 1em;
+}
+
 @media (min-width:37.5em) {
     .dish img {
         width: 100%;
@@ -219,7 +225,7 @@
     .logo img {
         margin-top: -6em;
     }
-    .main-bg {
+    .main-background {
         margin-top: -10px;
     }
     .categories-grid {
@@ -266,7 +272,7 @@
     .main{
          margin: 0 40px;
      }   
-    .main-bg {
+    .main-background {
         padding-top: 7em;
         border-radius: 20px;
     }

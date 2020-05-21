@@ -2,7 +2,7 @@ input, button, submit { border:none; background-color: white; }
 html {
     font-family: quicksand;
 }
-* img {
+body{
     overflow-x: hidden;
 }
 * {
@@ -46,9 +46,9 @@ html {
     font-size: 0em;
     line-height: 2em;
     position: relative;
-    top: 33%;
+    top: 35%; 
     left: 49%;
-    transform: translate(-60%,-50%);
+    transform: translate(-60%,-70%);
     opacity: 0;
     transition: all ease 1s;    
 }
@@ -68,6 +68,23 @@ html {
     font-size: 1.7em;
     opacity: 1;
     transform: translate(-77%,0%);
+}
+
+.natsu-logo {
+    display: none;
+}
+.desktop-nav {
+    display: none;
+}
+
+.main-bg {
+    width: 100%;
+    background-color: #D9F2E8;
+    padding-top: 5.5em;
+    padding-bottom: 5em;
+    position: absolute;
+    z-index: 0;
+    top: 0;
 }
 
 
@@ -122,7 +139,8 @@ html {
         opacity: 1;
     }
     .searchbar {
-        margin: 30px;
+        margin: 30px auto;
+        width: 50%;
     }
 }
 
@@ -137,6 +155,22 @@ html {
         display: none;
     }
     /* MENU BAR */
+    .natsu-logo img {
+        width: 85px;
+    }
+    .natsu-logo {
+        display: flex;
+        position: relative;
+        left: 3em;
+        top: 0.5em;
+        align-items: center;
+    }
+    .natsu-logo p {
+        font-size: 1.6em;
+        letter-spacing: 10px;
+        padding-left:10px;
+    }
+    
     .desktop-nav {
         display: block;
         position: absolute;
@@ -166,8 +200,8 @@ html {
     .searchbar {
         margin: 0 auto;
         width: 40%;
-        font-size: 1.5em;
-        padding: 4px;
+        font-size: 1.1em;
+        padding: 7px;
         border-radius: 30px;
     }
     .searchbar img {
