@@ -2,36 +2,35 @@
     display: none;
 }
 .header-image {
-    position: absolute;
-    top: 0;
+    margin: 10em 1.2em 1.2em;
+    position: relative;
 }
 .header-image img{
     width: 100%;
+    border-radius: 13px;
 }
-.afterheader {
-    position: absolute;
-    top: 22em;
-}
+
 .header {
     text-align: start;
     margin: 30px;
     color: #300D3C;
 }
 #title p{
-    font-size: 1.5em;
+    font-size: 2em;
 }
 #subtitle p{
     font-size: 1em;
+    margin-top: 3px;
 }
 .icons{
     margin: 2em 30px 0;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+
 }
 .icons div{
-    display: flex;
-    align-content: center;
+    display: block;
+    text-align: center;
 }
 .icons img{
     height: 28px;
@@ -39,7 +38,6 @@
 .icons p {
     position: relative;
     top: 6px;
-    left: 5px;
 }
 
 /* DESCRIPTIONS */
@@ -50,9 +48,6 @@
 }
 
 /* INGREDIENTS */
-.ingredient {
-    margin-bottom: 2em;
-}
 .ingredient h1{
     margin-left: 0;
     font-size: 1.5em;
@@ -64,7 +59,7 @@
 }
 .ing-pic{
     text-align: center;
-    margin-top: 2em;
+    margin: 1em 0;
 }
 .ing-pic img{
     width: 80%;
@@ -141,6 +136,7 @@
     background-color: white;
     margin: 0.5em 4px;
     border-radius: 5px;
+    box-shadow: 0px 1px 20px 2px #d3d3d3;
 }
 .step p {
     padding: 9px 15px;
@@ -155,9 +151,11 @@
 .headerimg {
    display: none;
 }
+
 @media (min-width: 37.5em) {
     .afterheader {
-        position: unset;
+        position: relative;
+        top: 6em;
     }
     .header-image {
         display: none;
@@ -171,12 +169,27 @@
     }
     .header {
         grid-area: header;
+        margin: 0 0 0 1.2em;
+    }
+    #title p{
+        font-size: 2em;
     }
     .icons {
         grid-area: icons;
+        margin: 0 0 0 1.2em;
+        width: 70%;
+    }
+    .icons p {
+        font-size: 0.8em;
+        top: 2px;
+    }
+    .icons img{
+        height: 20px;
     }
     .description {
         grid-area: desc;
+        margin: 0 0 0 1.2em;
+        font-size: 0.8em;
     }
     .side {
         display: grid;
@@ -186,8 +199,9 @@
         "headerimg header"
         "headerimg icons"
         "headerimg desc";
-        margin: 45px;
+        margin: 30px auto;
         align-items: start;
+        max-width: 720px;
     }
     INGREDIENT
     .ingredient h1{
@@ -212,112 +226,82 @@
         align-items: start;
         margin: 0 45px;
     }
-    /* .step {
-        width: 80%;
-        margin: 0 auto;
-    } */
     
 }
 
 @media (min-width: 62.5em){
-    .hamburger {
-        display: none;
-    }
-    .hamburger-bg {
-        display: none;
-    }
-    .menubar {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E7F4EF;
-        padding: 0 129px;
-        margin-bottom: 5em;
-    }
-   
-    .mylist a{
-        font-size: 2em;
-        text-decoration: none;
-        color: #300D3C;
-    }
-    .leftlogo {
-        display: flex;
-        align-items: center;
-    }
-    .leftlogo img {
-        height: 100px;
-        margin: 20px 10px 20px 0;  
-    }
-    .leftlogo p {
-        font-size: 2em;
+    .afterheader {
+        position: relative;
+        top: 8.5em;
     }
     .side {
-        grid-template-columns: 45% 55%;
-        grid-template-rows: auto auto auto;
-        grid-gap: 3.5em;
-        grid-template-areas: 
-        "headerimg header"
-        "headerimg icons"
-        "headerimg desc";
-        margin: 0 200px 0 129px;
-        align-items: start;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1050px;
     }
-    #title p {
-        font-size: 3em;
+    #title {
+        padding-left: 1.9em;
+    }
+    #title p{
+        font-size: 3.8em;
+    }
+    #subtitle {
+        padding-left: 1.9em;
     }
     #subtitle p {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
     .icons {
-        padding-right: 20em;
-        vertical-align: middle;
-    }
-    .icons div{
-        padding: 10px;
-    }
-    .icons img{
-        height:20px;
+        margin: 0;
+        padding-left: 2.9em;
     }
     .icons p {
-        font-size: 0.9em;
+        font-size: 1em;
         top: 2px;
     }
-    .description p{
+    .icons img{
+        height: 29px;
+    }
+    .description {
+        margin: 0;
+        padding-left: 2.9em;
         font-size: 1em;
-        line-height: 2em;
     }
-    .ingredient h1 {
-        margin-top: 4em;
-        padding: 20px 129px;
-        font-size: 3em;
-        width: 33%;
-        border-bottom-right-radius: 50px;
-        border-top-right-radius: 50px; 
+
+
+    .ingredient {
+        margin: 5em 0 3em;
     }
-    .ing-pic img{
-        padding: 0 60px 0 80px;
+    .ingredient h1{
+        font-size: 2.2em;
+        padding-left:10%;
+        width: 30%;
+        max-width: 1050px;
     }
     .ingredient-info {
         grid-area: no;
         margin: 0;
+        margin-top: 1em;
+        font-size: 1.1em;
+        line-height: 1.4em;
+    }
+    .ing-pic img{
+        grid-area: pic;
+        width: 90%;
+        padding-left: 1em;
+        margin-top: -4.4em;
+        margin-right: -4em;
     }
     .side2 {
-        display: grid;
-        grid-template-columns:40% 60%;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "no pic";
-        align-items: start;
-        margin: 0 129px;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1050px;
+        grid-template-columns:48% 52%;
     }
-    .ingredient-info {
-        margin-top: 3em;
-    }
-    .grid p {
-        font-size: 1.1em;
-        line-height: 2em;
-    }
+
+
+
+    
     .instruction h1{
         margin-top: 2em;
         padding: 20px 129px;
@@ -366,3 +350,5 @@
         grid-area: six;
     } 
 }
+
+

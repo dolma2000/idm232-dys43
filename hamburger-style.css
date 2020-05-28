@@ -1,0 +1,224 @@
+/* HAMBURGER MENU BAR */
+.natsulogo {
+    display: none;
+}
+.desktop-nav {
+    display: none;
+}
+
+#dark-bg {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+    display: none;
+    animation: all ease-in-out 1s;
+}
+.hamburger-bg {
+    width: 160px;
+    height: 160px;
+    background-color: #F7BE6A;
+    position: absolute;
+    z-index: 3;
+    top: -80px;
+    left: -80px;
+    border-radius: 160px;
+}
+.corner {
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    z-index: 4;
+ }
+
+ .nav-links {
+     width: 200px;
+     position: absolute;
+     top: 0;
+     z-index: 8;
+     border-bottom-right-radius: 60px;
+
+ }
+ .nav-links ul {
+     list-style: none;
+     font-size: 1.5em;
+     padding-left: 0;
+     margin: 0;
+ }
+ .nav-links li{
+     padding: 1em 0;
+     opacity: 0;
+     transition: opacity ease-in-out 0.6s;
+ }
+ .nav-links a {
+    color: #300D3C;
+     text-decoration: none;
+ }
+ .bar {
+     padding-left: 34px;
+     border-bottom-right-radius: 50px;
+ }
+
+ #first {
+     background-color:#F7BE6A ;
+     padding-top: 3em; 
+     position: relative;
+     z-index: 5; 
+     transform: translateX(-100%);
+     transition: all ease-in-out 1s;
+     transition-delay: 0.4s; 
+ }
+ #second {
+     background-color: #D9F2E8;
+     position: relative;
+     top: -2em;
+     padding-top: 2em;
+     z-index: 4;
+     transform: translateX(-100%);
+     transition: all ease-in-out 1s;
+     transition-delay: 0.2s;
+ }
+ #third {
+     background-color: rgb(200, 226, 130);
+     position: relative;
+     top: -4em;
+     padding-top: 2em;
+     z-index: 3;
+     transform: translateX(-100%);
+     transition: all ease-in-out 1s;
+ }
+ .nav-active #first{
+     transform: translateX(0%);
+     transition: all ease-in-out 1s;
+ }
+ .nav-active #second {
+     transform: translateX(0%);
+     transition: all ease-in-out 1s;
+     transition-delay: 0.2s;  
+ }
+ .nav-active #third {
+     transform: translateX(0%);
+     transition: all ease-in-out 1s;
+     transition-delay: 0.4s;
+ }
+ .nav-active li{
+     opacity: 1;
+ }
+
+/* LIGHT BLUE BACKGROUND */
+
+ .main-bg {
+    width: 100%;
+    background-color: #D9F2E8;
+    padding-top: 4.4em;
+    padding-bottom: 5em;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
+ /* SEARCH BAR */
+.searchbar {
+    margin: 20px;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 3px;
+}
+.searchbar form{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.searchbar img {
+    width: 25px;
+}
+
+
+@media (min-width: 37.5em) {
+    .corner {
+        display: none;
+    }
+    .hamburger-bg {
+        display: none;
+    }
+    /* search bar turned navigation bar with logo and other buttons */
+    .main-bg {
+        width: 100%;
+        background-color: #D9F2E8;
+        padding: 2em 0;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+    }
+    .searchbar {
+        width: 40%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    .natsulogo {
+        display: block;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 1em;
+        margin-left: 2em;
+    }
+    .natsulogo img {
+        width: 70px;
+    }
+    .natsulogo p{
+        margin-left: 5px;
+        letter-spacing: 4px;
+    }
+
+    /* My List and Help Button on the Right Side of Nav Bar */
+    .desktop-nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 2.4em 1em;
+        text-align: center;
+    }
+    .desktop-nav a {
+        text-align: center;
+        font-size: 1.1em;
+        text-decoration: none;
+        color: #300D3C;
+        font-weight:100;
+        letter-spacing: 1px;
+        margin: 0 0.5em;
+        padding: 0.5em 0.5em;
+        transition: all ease 0.5s;
+        border-radius: 40px;
+    }
+    .desktop-nav a:hover {
+        background-color:hsla(155, 49%, 81%, 0.767);
+        border-radius: 40px;
+        padding: 0.5em 0.5em;
+    }
+
+}
+
+@media (min-width: 62.5em){
+    .natsulogo {
+        top: 0.6em;
+        margin-left: 4em;
+    }
+    .natsulogo img {
+        width: 80px;
+    }
+    .deskptop-nav {
+        margin: 2.4em 4em;
+    }
+    .desktop-nav a {
+        font-size: 1.2em;
+    }
+ 
+}
+  

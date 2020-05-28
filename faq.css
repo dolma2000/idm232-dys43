@@ -1,62 +1,22 @@
-.main-bg {
-    width: 100%;
-    background-color: #D9F2E8;
-    padding-top: 5em;
-    padding-bottom: 4.3em;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-}
-.main-bg h1{
-    font-size: 4em;
-    text-align: end;
-    margin-right: 40px;
-}
-.menubar {
-    display: none;
-}
 .faq {
-    margin: 0 1em;
-    position: absolute;
-    z-index: 4;
-    top: 12em;
+    position: relative;
+    z-index: 2;
+    top: 105px;
+    margin: 0 auto;
+    text-align: center;
 }
-.faq p {
-    background-color: white;
-    border-radius: 30px;
-    box-shadow: 0px 2px 28px 0px #c7c7c7;
-    padding: 3em 30px;
-    width: 94vw;
+.faq h1 {  
+    font-size: 4em;
 }
-
-@media (min-width: 62.5em){
-    .main-bg {
-        display: none;
-    }
-    .menubar {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E7F4EF;
-        padding: 0 129px;
-        margin-bottom: 5em;
-    }
-   
-    .mylist a{
-        font-size: 2em;
-        text-decoration: none;
-        color: #300D3C;
-    }
-    .leftlogo {
-        display: flex;
-        align-items: center;
-    }
-    .leftlogo img {
-        height: 100px;
-        margin: 20px 10px 20px 0;  
-    }
-    .leftlogo p {
-        font-size: 2em;
-    }
+.questions {
+    margin: 30px;
+    position: relative;
+    top: 6em;
+}
+.questions div{
+    margin-top: 3em;
+}
+.questions p {
+    margin-top: 12px;
+    line-height: 20px;
 }

@@ -1,0 +1,198 @@
+<?php 
+include "includes/database.php"; 
+
+ //Perform Database Query
+ $query = "SELECT * FROM recipes"; //returns everything from "recipe" db - it works
+ $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
+ 
+
+ // Check there are no errors with our SQL statement
+ if (!$result) {
+ die ("Database query failed.");
+ }?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link rel="stylesheet" href="hamburgers-master/dist/hamburgers2.css">
+    <link rel="stylesheet" href="recipe.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<?php include "includes/_header.php";?>
+
+    <!-- RECIPE -->
+
+<?php while ($row = mysqli_fetch_assoc($result)) { ?>   
+
+<div class="header-image">
+    <img src="IDM232-assets/main_img/<?php echo $row['main_img']; ?>" alt="">
+</div>
+
+
+<!-- When PHP not working use this static image -->
+<!-- <div class="header-image">
+        <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="">
+</div> -->
+
+
+
+    <div class="afterheader"> 
+        <div class="side">
+
+            <div class="headerimg">
+                <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="">
+            </div>
+            <div class="header" >
+                <div id="title"><p><b><?php echo $row['tle'];?></b></p></div>
+                <div id="subtitle"><p><?php echo $row['subtitle'];?></p></div>
+            </div>
+            
+            <div class="icons">
+                <div><img src="images/icons/time.svg" alt=""><p><?php echo $row['cook_time'];?></p></div>
+                <div><img src="images/icons/serve.svg" alt=""><p><?php echo $row['servings'];?></p></div>
+                <div><img src="images/icons/calories.svg" alt=""><p><?php echo $row['cal_per_serving'];?></p></div>
+            </div>
+
+            <div class="description">
+                <p>
+                <?php echo $row['description'];?>
+                </p>
+            </div>
+        </div>
+
+        <!-- INGREDIENTS -->
+        <div class="ingredient">
+            <h1>Ingredients</h1>
+        </div>
+
+    <div class="side2">
+        
+        <div class="ing-pic"><img src="IDM232-assets/ingredients_img/<?php echo $row['ingredients_img']; ?>" alt=""></div>
+        
+<!-- boneless, skinless chicken breast -->
+        <div class="ingredient-info">
+            <div class="grid">
+                <div class="item">
+                    <p><?php echo $row['all_ingredients']; ?></p>
+                </div>
+                <div class="no">
+                    <p>4</p>
+                </div>
+            </div>
+        <hr>
+            <div class="grid">
+                <div class="item">
+                    <p>ancho chile paste</p>
+                </div>
+                <div class="no">
+                    <p>1</p>
+                </div>
+            </div>
+        <hr>
+            <div class="grid">
+                <div class="item">
+                    <p>ancho chile paste</p>
+                </div>
+                <div class="no">
+                    <p>2</p>
+                </div>
+            </div>
+        <hr>
+            <div class="grid">
+                <div class="item">
+                    <p>crème fraîche</p>
+                </div>
+                <div class="no">
+                    <p>2</p>
+                </div>
+            </div>
+        <hr>
+            <div class="grid">
+                <div class="item">
+                    <p>golden raisins</p>
+                </div>
+                <div class="no">
+                    <p>3</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+        <!-- INSTRUCTION -->
+
+        <div class="instruction">
+            <h1>Instruction</h1>
+        </div>
+        
+        <div id="exp-col">
+            <button id="exp">
+                <p><b>Expand</b></p>
+            </button>
+            <button id="col">
+                <p><b>Collapse</b></p>
+            </button>
+        </div>
+        
+
+        <div class="steps">
+            <div class="step one">
+                <p><?php echo $row['step_title_1'];?></p>
+                <div class="inside">
+                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18594_WEB_high_feature.jpg" alt="">
+                    <p><?php echo $row['step_desc_1'];?></p>
+                </div>
+            </div>
+            <div class="step two">
+                <p><?php echo $row['step_title_2'];?></p>
+                <div class="inside">
+                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18622_WEB_high_feature.jpg" alt="">
+                    <p><?php echo $row['step_desc_2'];?></p>
+                </div>
+            </div>
+            <div class="step three">
+                <p><?php echo $row['step_title_3'];?></p>
+                <div class="inside">
+                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18626_WEB_high_feature.jpg" alt="">
+                    <p><?php echo $row['step_desc_3'];?></p>
+                </div>
+            </div>
+            <div class="step four">
+                <p><?php echo $row['step_title_4'];?></p>
+                <div class="inside">
+                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18609_WEB_high_feature.jpg" alt="">
+                    <p><?php echo $row['step_desc_4'];?></p>
+                </div>
+            </div>
+            <div class="step five">
+                <p><?php echo $row['step_title_5'];?></p>
+                <div class="inside">
+                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18639_WEB_high_feature.jpg" alt="">
+                    <p><?php echo $row['step_desc_5'];?></p>
+                </div>
+            </div>
+            <div class="step six">
+                <p><?php echo $row['step_title_6'];?></p>
+                <div class="inside">
+                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18630_WEB_high_feature.jpg" alt="">
+                    <p><?php echo $row['step_desc_6'];?></p>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+
+<?php mysqli_free_result($result); ?>
+<script src="main.js"></script>
+
+<?php
+    mysqli_close($connection);
+?>
+
+</body>
+</html>
