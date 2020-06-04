@@ -5,7 +5,7 @@ include "../includes/database.php";
  $query = 
  "SELECT `tle`, `subtitle`, `rounded_img`, `cook_time`, `cal` , `type` 
  FROM recipe
- WHERE `type` LIKE '%vegan%'
+ WHERE `type` LIKE '%potluck%'
  "; //returns everything from "recipe" db - it works
  $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
  
@@ -21,7 +21,7 @@ include "../includes/database.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vegan</title>
+    <title>Potluck</title>
     <link rel="stylesheet" href="../../hamburgers-master/dist/hamburgers.css">
     <link rel="stylesheet" href="../../searchresults.css">
     <link rel="stylesheet" href="../../main.css">

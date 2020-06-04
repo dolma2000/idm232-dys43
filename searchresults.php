@@ -5,6 +5,9 @@ include "includes/database.php";
 if (isset($_POST['submit'])) {
     //if form is submitted
     $search= $_POST['search'];
+// if ($search->num_row==0) {
+//     redirect_to("error.php");
+// }
 }
 
   //Perform Database Query

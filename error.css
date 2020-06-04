@@ -1,49 +1,4 @@
-.main-bg {
-    width: 100%;
-    background-color: #D9F2E8;
-    padding-top: 6em;
-    padding-bottom: 4.3em;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-}
-.menubar {
-    display: none;
-}
-
 .error {
     margin: 20em 3em;
     text-align: center;
-}
-
-@media (min-width: 62.5em){
-    .main-bg {
-        display: none;
-    }
-    .menubar {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E7F4EF;
-        padding: 0 129px;
-        margin-bottom: 5em;
-    }
-   
-    .mylist a{
-        font-size: 2em;
-        text-decoration: none;
-        color: #300D3C;
-    }
-    .leftlogo {
-        display: flex;
-        align-items: center;
-    }
-    .leftlogo img {
-        height: 100px;
-        margin: 20px 10px 20px 0;  
-    }
-    .leftlogo p {
-        font-size: 2em;
-    }
 }

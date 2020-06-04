@@ -207,6 +207,7 @@
     .ingredient h1{
         padding-left: 45px;
         width: 30%;
+        margin-bottom: 2em;
     }
     .ing-pic img{
         grid-area: pic;

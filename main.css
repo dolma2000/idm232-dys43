@@ -38,6 +38,12 @@ input {
   transform: translate(-50%, -50%);
 }
 
+/* ERROR PAGE */
+.error {
+    margin: 20em 3em;
+    text-align: center;
+}
+
 @media (min-width:37.5em) {
     .footer {
         margin-top: 7em;
