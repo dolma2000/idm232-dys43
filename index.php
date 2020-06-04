@@ -76,11 +76,11 @@
     </div>
 
     <div class="dish">
-        <img id="one" src="IDM232-assets/images/Recipe_Thai_Curry_Chicken_with_Carrots_Bok_Choy/1218_2PRE07_Thai-Curry-Chicken_96739_WEB_SQ_hi_res copy.png" alt="dish">
-        <img id="two" src="IDM232-assets/images/Recipe_Beef_Medallions_Mushroom_Sauce_with_Mashed_Potatoes/0101_2PM_Steak-Diane_97315_SQ_hi_res copy.png" alt="dish">
-        <img id="three" src="IDM232-assets/images/Recipe_Bucatini_Alfredo_with_Broccoli/0101_2PV1_Broccoli-Bucatini-Fettuccine_97230_SQ_hi_res copy.png" alt="dish">
-        <img id="four" src="IDM232-assets/images/Recipe_HoneyButter_Barramundi_with_Zaatar_Roasted_Vegetables/0108_FPF_Barramundi_0304_WEB_SQ_hi_res copy.png" alt="dish">
-        <img id="five" src="IDM232-assets/images/Recipe_Roasted_Red_Pepper_Pasta_with_LemonParmesan_Broccoli/0108_2PV1_Roasted-Pepper-Pasta_97907_SQ_hi_res copy.png" alt="dish">
+        <img id="one" src="IDM232-assets/circle_img/1218_2PRE07_Thai-Curry-Chicken_96739_WEB_SQ_hi_res copy.png" alt="dish">
+        <img id="two" src="IDM232-assets/circle_img/0101_2PM_Steak-Diane_97315_SQ_hi_res copy.png" alt="dish">
+        <img id="three" src="IDM232-assets/circle_img/0101_2PV1_Broccoli-Bucatini-Fettuccine_97230_SQ_hi_res copy.png" alt="dish">
+        <img id="four" src="IDM232-assets/circle_img/0108_FPF_Barramundi_0304_WEB_SQ_hi_res copy.png" alt="dish">
+        <img id="five" src="IDM232-assets/circle_img/0108_2PV1_Roasted-Pepper-Pasta_97907_SQ_hi_res copy.png" alt="dish">
     </div>
         
 
