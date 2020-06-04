@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1917" height="488" viewBox="0 0 1917 488">
+  <defs>
+    <filter id="Path_30" x="-54" y="32.364" width="2028" height="511.39" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feFlood flood-opacity="0"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-iPhone_X_XS_11_Pro_24">
+      <rect width="1917" height="488"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_X_XS_11_Pro_24" data-name="iPhone X/XS/11 Pro – 24" clip-path="url(#clip-iPhone_X_XS_11_Pro_24)">
+    <rect width="1917" height="488" fill="#fff"/>
+    <path id="Path_32" data-name="Path 32" d="M-790,3552.572s266.8-221.838,610.043-138.323,582.126,208.008,893.529,164.116,417.544-164.116,417.544-164.116V3894.6H-790Z" transform="translate(790 -3370.53)" fill="#e8f86c" opacity="0.658"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_30)">
+      <path id="Path_30-2" data-name="Path 30" d="M-790,3619.9s213.246-220.272,584.512-186.347S511.317,3730.961,1130,3560.586v272.8H-790Z" transform="translate(790 -3344.64)" fill="#d9f2e8"/>
+    </g>
+  </g>
+</svg>

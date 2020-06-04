@@ -5,6 +5,7 @@
 
 
 /* UPDATED SEARCH RESULTS RECUPE */
+
 .result a {
     text-decoration: none;
     color: inherit;
@@ -82,10 +83,15 @@
         position: absolute;
         z-index: -1;
         }
-    .result {
+    .everything {
         display: flex;
-        padding: 1em;
         flex-wrap: wrap;
+        margin: 0 1em;
+        justify-content: left;
+    }
+    .result {
+        margin: 0 auto;
+        padding: 4px;
     }
     .result-container{
         margin-top: 8em;
@@ -133,9 +139,7 @@
     position: absolute;
     z-index: -1;
     }
-    .result {
-        margin: 1em 1em 0;
+    .everything {
+        margin: 0 2em
     }
-
-
 }

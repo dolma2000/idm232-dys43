@@ -1,9 +1,12 @@
 @import "hamburger-style.css";
 @import "normalize.css";
 
-input, button, submit { border:none; background-color: white; } 
+
+input, button, submit { border:none; padding: 0;
+    background: none } 
 html {
     font-family: quicksand;
+    
 }
 body{
     overflow-x: hidden;
@@ -11,6 +14,34 @@ body{
 * {
     box-sizing: border-box;
     margin: 0;
+}
+input {
+    width: 80%;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 17em;
+    position: relative;
+    margin-bottom: 0;
+}
+.footer img {
+    width: 100%;
+}
+.text {
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    top: 90%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width:37.5em) {
+    .footer {
+        margin-top: 7em;
+    }
 }
 
 

@@ -14,7 +14,7 @@ else {
   $dbhost = "localhost";
   $dbuser = "dolmayan_idm232";
   $dbpass = "idm232recipewebsite";
-  $dbname = "dolmayan_idm232";
+  $dbname = "dolmayan_cookbook";
 }
 
 //EXECUTE CONNECTION

@@ -1,7 +1,7 @@
 .faq {
     position: relative;
     z-index: 2;
-    top: 105px;
+    top: 140px;
     margin: 0 auto;
     text-align: center;
 }
@@ -9,9 +9,12 @@
     font-size: 4em;
 }
 .questions {
-    margin: 30px;
+    margin: 2em;
     position: relative;
-    top: 6em;
+    top: 9em;
+}
+.questions h3{
+    color: rgb(255, 153, 0);
 }
 .questions div{
     margin-top: 3em;
@@ -19,4 +22,19 @@
 .questions p {
     margin-top: 12px;
     line-height: 20px;
+}
+
+@media (min-width:37.5em) {
+.questions {
+    margin: 0 4em 17em;
+
+}
+}
+
+@media (min-width: 62.5em){
+.questions {
+    margin: 0 auto 17em;
+    width: 60%;
+    max-width: 700px;
+}
 }

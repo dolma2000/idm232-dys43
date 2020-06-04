@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="243" viewBox="0 0 375 243">
+  <defs>
+    <filter id="Path_40" x="-57" y="-38.26" width="544.543" height="389.194" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feFlood flood-opacity="0"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Artboard_2">
+      <rect width="375" height="243"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_2" data-name="Artboard – 2" clip-path="url(#clip-Artboard_2)">
+    <rect width="375" height="243" fill="#fff"/>
+    <path id="Path_39" data-name="Path 39" d="M-790,3470.8s79.515-67.45,162.205-29.556,91.45,59.322,179.815,41.926S-353,3404.467-353,3404.467l-54.276,322.671H-784.983Z" transform="translate(787 -3428.759)" fill="#e8f86c" opacity="0.658"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_40)">
+      <path id="Path_40-2" data-name="Path 40" d="M-790,3524.246s54.013-75.311,138.427-58.474,157.449,113.593,298.117,29.038c0,70.623-55.16,249.7-55.16,249.7H-790Z" transform="translate(787 -3448.58)" fill="#d9f2e8"/>
+    </g>
+  </g>
+</svg>

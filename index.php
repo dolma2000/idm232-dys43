@@ -11,22 +11,6 @@
 <body>
 
 
- <!-- PHP FOR RANDOM RECIPE - Same Recipe.php Template but random id parameter -->
-
- <?php $link_name = "Recipe"; ?>
-
-<!-- <ul>
-<?php
-  for ($i=1; $i < 5; $i++) {
-    echo "<li>";
-    echo "<a href=\"recipe.php?id={$i}\">Recipe</a>";
-    echo "</li>";
-  }
-?>
-</ul> -->
-
-<!-- PHP FOR RANDOM RECIPE -->
-
 
 <!-- NEW HAMBURGER  -->
 
@@ -48,11 +32,11 @@
                 </div>
 
                 <div class="bar" id="second">
-                    <li><b><a href="#">My List</a></b></li>
+                    <li><b><a href="searchresults.php">All Recipes</a></b></li>
                 </div>
 
                 <div class="bar" id="third">
-                    <li><b><a href="#">Help</a></b></li>
+                    <li><b><a href="FAQ.php">Help</a></b></li>
                  </div>
             </ul>
         </nav>
@@ -62,7 +46,7 @@
 <!-- MY LIST AND HELP FOR TABLET AND DESKTOP -->
 
 <div class="desktop-nav">
-        <a href="" class="line">My List</a>
+        <a href="searchresults.php" class="line">All Recipes</a>
         <a href="FAQ.html" class="line">Help</a> 
     </div>
 
@@ -115,13 +99,13 @@
                 </form>
             </div>
             <div class="categories-grid">
-                <a href="searchresults.html"><div class="box vegan">                    
+                <a href="category/vegan.php"><div class="box vegan">                    
                     <img src="images/homepage/vegan.png" alt="vegan">
                     <div class="center"><p>VEGAN</p></div>
                 </div></a>
                 <a href="error.html"><div class="box dinner"> 
                     <img src="images/homepage/dinner.png" alt="dinner">
-                    <div class="center"><p >DINNER</p></div>  
+                    <div class="center"><p>DINNER</p></div>  
                 </div></a>
                 <div class="box salad">                    
                     <img src="images/homepage/salad.png" alt="salad">
@@ -143,12 +127,15 @@
                     <img src="images/homepage/italian.png" alt="italian">
                     <div class="center"><p >ITALIAN</p></div>
                 </div>
-                <div class="box random">                    
+                <a href="recipe_random.php"><div class="box random">                    
                     <img src="images/homepage/random.png" alt="italian">
-                </div>
+                </div></a>
+
             </div>
         </div>
     </div>
+
+    <?php include "includes/_footer.php";?>
 
     <script src="main.js"></script>
 </body>

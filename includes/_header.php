@@ -20,11 +20,11 @@
                 </div>
 
                 <div class="bar" id="second">
-                    <li><b><a href="#">My List</a></b></li>
+                    <li><b><a href="searchresults.php">All Recipes</a></b></li>
                 </div>
 
                 <div class="bar" id="third">
-                    <li><b><a href="#">Help</a></b></li>
+                    <li><b><a href="FAQ.php">Help</a></b></li>
                  </div>
             </ul>
         </nav>
@@ -35,9 +35,9 @@
 
 <div class="main-bg">
     <div class="searchbar">
-        <form action="">
-            <button type="submit"><img src="images/search_icon.svg" alt=""></button>
-            <input type="text" placeholder="Pasta, Vegan, Easy, Spicy…" name="search">
+        <form action="searchresults.php" method="post">
+            <button type="submit" name="submit" value="Submit"><img src="images/search_icon.svg" alt=""></button>
+            <input type="text" placeholder="Pasta, Vegan, Chicken..." name="search" value="">
         </form>
     </div>
     <div class="natsulogo">
@@ -49,8 +49,8 @@
 <!-- MY LIST AND HELP FOR TABLET AND DESKTOP -->
 
 <div class="desktop-nav different">
-        <a href="" class="line">My List</a>
-        <a href="FAQ.html" class="line">Help</a> 
+        <a href="searchresults.php" class="line">All Recipes</a>
+        <a href="FAQ.php" class="line">Help</a> 
 </div>
 
 <!-- END: NAVIGATION BAR FOR BOTH MOBILE AND TABLET/DESKTOP -->

@@ -5,8 +5,7 @@ include "../includes/database.php";
  $query = 
  "SELECT `tle`, `subtitle`, `rounded_img`, `cook_time`, `cal` , `type` 
  FROM recipe
- WHERE `type` =
-'dinner'
+ WHERE `type` LIKE '%vegan%'
  "; //returns everything from "recipe" db - it works
  $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
  

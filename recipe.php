@@ -1,15 +1,17 @@
 <?php 
-include "includes/database.php"; 
-
- //Perform Database Query
- $query = "SELECT * FROM recipes"; //returns everything from "recipe" db - it works
- $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
+include "includes/database.php";
+ $id = $_GET['id'];
  
+ //Perform Database Query
+ $query = "SELECT * FROM recipes WHERE `id` LIKE '$id'"; //returns everything from "recipe" db - it works
+ $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
+
 
  // Check there are no errors with our SQL statement
  if (!$result) {
  die ("Database query failed.");
- }?>
+}
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,27 +27,33 @@ include "includes/database.php";
 
 <?php include "includes/_header.php";?>
 
-    <!-- RECIPE -->
 
-<?php while ($row = mysqli_fetch_assoc($result)) { ?>   
+<?php while ($row = mysqli_fetch_assoc($result)) { 
+    
+  
+$step = $row['step_imgs'];
+$each = explode("*", $step);
 
+$ingredient = $row['all_ingredients'];
+$food = explode("*", $ingredient)
+
+  ?>   
+
+
+
+<!-- MAIN IMIAGE FOR MOBILE HIDDEN IN TABLET AND DESKTOP -->
 <div class="header-image">
     <img src="IDM232-assets/main_img/<?php echo $row['main_img']; ?>" alt="">
 </div>
 
 
-<!-- When PHP not working use this static image -->
-<!-- <div class="header-image">
-        <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="">
-</div> -->
 
-
-
+ <!-- RECIPE -->
     <div class="afterheader"> 
         <div class="side">
 
             <div class="headerimg">
-                <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="">
+                <img src="IDM232-assets/main_img/<?php echo $row['main_img']; ?>" alt="">
             </div>
             <div class="header" >
                 <div id="title"><p><b><?php echo $row['tle'];?></b></p></div>
@@ -78,48 +86,94 @@ include "includes/database.php";
         <div class="ingredient-info">
             <div class="grid">
                 <div class="item">
-                    <p><?php echo $row['all_ingredients']; ?></p>
+                    <p><?php echo $food[0];?></p>
                 </div>
                 <div class="no">
-                    <p>4</p>
+                    <p></p>
                 </div>
             </div>
         <hr>
             <div class="grid">
                 <div class="item">
-                    <p>ancho chile paste</p>
+                    <p><?php echo $food[1];?></p>
                 </div>
                 <div class="no">
-                    <p>1</p>
+                    <p></p>
                 </div>
             </div>
         <hr>
             <div class="grid">
                 <div class="item">
-                    <p>ancho chile paste</p>
+                    <p><?php echo $food[2];?></p>
                 </div>
                 <div class="no">
-                    <p>2</p>
+                    <p></p>
                 </div>
             </div>
         <hr>
             <div class="grid">
                 <div class="item">
-                    <p>crème fraîche</p>
+                    <p><?php echo $food[3];?></p>
                 </div>
                 <div class="no">
-                    <p>2</p>
+                    <p></p>
                 </div>
             </div>
         <hr>
             <div class="grid">
                 <div class="item">
-                    <p>golden raisins</p>
+                    <p><?php echo $food[4];?></p>
                 </div>
                 <div class="no">
-                    <p>3</p>
+                    <p></p>
                 </div>
             </div>
+        <hr>
+            <div class="grid">
+                <div class="item">
+                    <p><?php echo $food[5];?></p>
+                </div>
+                <div class="no">
+                    <p></p>
+                </div>
+            </div>
+        <hr>
+            <div class="grid">
+                    <div class="item">
+                        <p><?php echo $food[6];?></p>
+                    </div>
+                    <div class="no">
+                        <p></p>
+                    </div>
+                </div>
+        <hr>
+            <div class="grid">
+                    <div class="item">
+                        <p><?php echo $food[7];?></p>
+                    </div>
+                    <div class="no">
+                        <p></p>
+                    </div>
+                </div>
+        <hr>
+            <div class="grid">
+                <div class="item">
+                    <p><?php echo $food[8];?></p>
+                </div>
+                <div class="no">
+                    <p></p>
+                </div>
+            </div>
+        <hr>
+            <div class="grid">
+                <div class="item">
+                    <p><?php echo $food[9];?></p>
+                </div>
+                <div class="no">
+                    <p></p>
+                </div>
+            </div>
+        <hr>
 
         </div>
 
@@ -145,47 +199,49 @@ include "includes/database.php";
             <div class="step one">
                 <p><?php echo $row['step_title_1'];?></p>
                 <div class="inside">
-                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18594_WEB_high_feature.jpg" alt="">
+                    <img src="IDM232-assets/step_imgs/<?php echo $each[0];?>" alt="Step 1">
                     <p><?php echo $row['step_desc_1'];?></p>
                 </div>
             </div>
             <div class="step two">
                 <p><?php echo $row['step_title_2'];?></p>
                 <div class="inside">
-                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18622_WEB_high_feature.jpg" alt="">
+                    <img src="IDM232-assets/step_imgs/<?php echo $each[1];?>" alt="Step 2">
                     <p><?php echo $row['step_desc_2'];?></p>
                 </div>
             </div>
             <div class="step three">
                 <p><?php echo $row['step_title_3'];?></p>
                 <div class="inside">
-                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18626_WEB_high_feature.jpg" alt="">
+                    <img src="IDM232-assets/step_imgs/<?php echo $each[2];?>" alt="Step 3">
                     <p><?php echo $row['step_desc_3'];?></p>
                 </div>
             </div>
             <div class="step four">
                 <p><?php echo $row['step_title_4'];?></p>
                 <div class="inside">
-                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18609_WEB_high_feature.jpg" alt="">
+                    <img src="IDM232-assets/step_imgs/<?php echo $each[3];?>" alt="Step 4">
                     <p><?php echo $row['step_desc_4'];?></p>
                 </div>
             </div>
             <div class="step five">
                 <p><?php echo $row['step_title_5'];?></p>
                 <div class="inside">
-                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18639_WEB_high_feature.jpg" alt="">
+                    <img src="IDM232-assets/step_imgs/<?php echo $each[4];?>" alt="Step 5">
                     <p><?php echo $row['step_desc_5'];?></p>
                 </div>
             </div>
             <div class="step six">
                 <p><?php echo $row['step_title_6'];?></p>
                 <div class="inside">
-                    <img src="IDM232-assets/images/Recipe_Ancho-Orange_Chicken_with_Kale_Rice_Roasted_Carrots/0101_FPP_Chicken-Rice_18630_WEB_high_feature.jpg" alt="">
+                    <img src="IDM232-assets/step_imgs/<?php echo $each[5];?>" alt="Step 6">
                     <p><?php echo $row['step_desc_6'];?></p>
                 </div>
             </div>
         </div>
         <?php } ?>
+
+<?php include "includes/_footer.php";?>        
 
 <?php mysqli_free_result($result); ?>
 <script src="main.js"></script>

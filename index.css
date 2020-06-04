@@ -136,6 +136,9 @@
     letter-spacing: 2px;
     font-size: 1.4em;
 }
+.box img:hover {
+    transform: scale(1.1);
+}
 .vegan {
     grid-area: vegan;
 }
@@ -166,6 +169,8 @@
     border-radius: 40px;
     padding: 0.5em 1em;
 }
+
+
 
 @media (min-width:37.5em) {
     .dish img {
