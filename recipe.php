@@ -3,7 +3,7 @@ include "includes/database.php";
  $id = $_GET['id'];
  
  //Perform Database Query
- $query = "SELECT * FROM recipes WHERE `id` LIKE '$id'"; //returns everything from "recipe" db - it works
+ $query = "SELECT * FROM recipe WHERE `id` LIKE '$id'"; //returns everything from "recipe" db - it works
  $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
 
 
@@ -22,22 +22,19 @@ include "includes/database.php";
     <link rel="stylesheet" href="hamburgers-master/dist/hamburgers2.css">
     <link rel="stylesheet" href="recipe.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="checkbox.css">
 </head>
 <body>
 
 <?php include "includes/_header.php";?>
 
 
-<?php while ($row = mysqli_fetch_assoc($result)) { 
-    
+<?php while ($row = mysqli_fetch_assoc($result)) {   
   
 $step = $row['step_imgs'];
 $each = explode("*", $step);
 
-$ingredient = $row['all_ingredients'];
-$food = explode("*", $ingredient)
-
-  ?>   
+?>   
 
 
 
@@ -82,102 +79,62 @@ $food = explode("*", $ingredient)
         
         <div class="ing-pic"><img src="IDM232-assets/ingredients_img/<?php echo $row['ingredients_img']; ?>" alt=""></div>
         
-<!-- boneless, skinless chicken breast -->
+<!-- INGREDIENTS -->
         <div class="ingredient-info">
-            <div class="grid">
+           
                 <div class="item">
-                    <p><?php echo $food[0];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
-            <div class="grid">
-                <div class="item">
-                    <p><?php echo $food[1];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
-            <div class="grid">
-                <div class="item">
-                    <p><?php echo $food[2];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
-            <div class="grid">
-                <div class="item">
-                    <p><?php echo $food[3];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
-            <div class="grid">
-                <div class="item">
-                    <p><?php echo $food[4];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
-            <div class="grid">
-                <div class="item">
-                    <p><?php echo $food[5];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
-            <div class="grid">
-                    <div class="item">
-                        <p><?php echo $food[6];?></p>
-                    </div>
-                    <div class="no">
-                        <p></p>
-                    </div>
-                </div>
-        <hr>
-            <div class="grid">
-                    <div class="item">
-                        <p><?php echo $food[7];?></p>
-                    </div>
-                    <div class="no">
-                        <p></p>
-                    </div>
-                </div>
-        <hr>
-            <div class="grid">
-                <div class="item">
-                    <p><?php echo $food[8];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
-            <div class="grid">
-                <div class="item">
-                    <p><?php echo $food[9];?></p>
-                </div>
-                <div class="no">
-                    <p></p>
-                </div>
-            </div>
-        <hr>
+                    
+                    <?php 
 
-        </div>
+                        //call all the ingredient
+                        $ingredStr = $row['all_ingredients'];
+                    
+                        // convert string to array
+                        $ingredArray = explode("*", $ingredStr);
+                        
+                        //increment the value of the [ ] until the full number of ingredient
+                        for ($lp=0; $lp<count($ingredArray); $lp++){
+                            $oneIngred = $ingredArray[$lp];
+                        //     echo "<p>".$oneIngred."</p>"."<hr>";
+                        // }
+                    ?>
+                    <div class="inline">
+                        <!--ingredient name-->
+                        <p id="food"><?php echo $oneIngred;?></p>
+                        
+                        <!--checkbox-->
+                        <div class="box1">
+                        <div id="app">
+                            <div class="card">
+                            <ul id="list">
+                                <li class="item">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox"/>
+                                    <svg viewBox="0 0 35.6 35.6">
+                                    <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                                    <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                                    <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                                    </svg>
+                                </div>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
 
+                    </div>
+                    
+     
+ 
+                </div>
+                <hr>
+
+                <?php } ?>
+             
+            </div>
+      
     </div>
+                        </div>
+
 
         <!-- INSTRUCTION -->
 
@@ -241,6 +198,7 @@ $food = explode("*", $ingredient)
         </div>
         <?php } ?>
 
+
 <?php include "includes/_footer.php";?>        
 
 <?php mysqli_free_result($result); ?>
@@ -249,6 +207,8 @@ $food = explode("*", $ingredient)
 <?php
     mysqli_close($connection);
 ?>
+
+
 
 </body>
 </html>

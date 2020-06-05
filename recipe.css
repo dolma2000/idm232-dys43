@@ -73,14 +73,24 @@
     width: 99%;
     margin: 5px 0;
 }
-.grid {
-    display: grid;
-    grid-template-columns: 95% 5%;
-    grid-template-rows: auto;
-    grid-template-areas: "ing no";
-}
+
 .item {
     grid-area: ing;
+}
+.inline {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "food check";
+    align-content: center;
+}
+#food {
+    grid-area: food;
+}
+.box1 {
+    text-align: end;
+    grid-area: check;
+    position: relative;
+    right: -3.5em;
 }
 .no {
     grid-area: no;
@@ -209,6 +219,11 @@
         width: 30%;
         margin-bottom: 2em;
     }
+
+    .ing-pic {
+        margin: 0;
+        align-self: center ;
+    }
     .ing-pic img{
         grid-area: pic;
         width: 100%;
@@ -217,15 +232,19 @@
     .ingredient-info {
         grid-area: no;
         margin: 0;
+        align-self: center;
     }
     .side2 {
         display: grid;
-        grid-template-columns:40% 60%;
+        grid-template-columns:50% 50%;
         grid-template-rows: auto;
         grid-template-areas: 
         "no pic";
         align-items: start;
-        margin: 0 45px;
+        margin: 1.5em 45px;
+    }
+    .box1 {
+        right: -1.5em;
     }
     
 }
@@ -271,7 +290,7 @@
 
 
     .ingredient {
-        margin: 3em 0;
+        margin: 3em 0 0em;
         background-color: #E7F4EF;
         padding: 10px 0;
         width: 40%;
@@ -294,23 +313,22 @@
     }
     .ingredient-info {
         grid-area: no;
-        margin: 0;
-        margin-top: 1em;
         font-size: 1.1em;
         line-height: 1.4em;
+        margin: 2em 0;
     }
     .ing-pic img{
         grid-area: pic;
         width: 90%;
-        padding-left: 1em;
-        margin-top: -4.4em;
-        margin-right: -4em;
     }
     .side2 {
         margin: 0 auto;
         width: 90%;
         max-width: 1050px;
         grid-template-columns:48% 52%;
+    }
+    .box1 {
+        right: -3.5em;
     }
 
     #exp-col{
