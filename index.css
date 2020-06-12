@@ -3,10 +3,20 @@
 }
 .dish img {
     width: 160px;
-    height: 160px;  
+    height: 160px;
+    transition: all 1s;  
 }
 .dish img:hover {
     transform: scale(1.1);
+    transition: all 0.4s;
+}
+.dish p{
+    position: absolute;
+    top: 18em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #e7a94c;
 }
 
 .mini-icon img {
@@ -81,6 +91,7 @@
 .logo img {
     margin: 22em auto 0;
     position: relative;
+    z-index: 1;
     left: 50%;
     transform: translateX(-50%);
     width: 170px;
@@ -90,7 +101,6 @@
 /* FOOD CATEGORIES */
 .main-background {
     position: relative;
-    z-index: -1;
     top: -75px;
     width: 100%;
     background-color: #D9F2E8;
@@ -102,6 +112,8 @@
     position: relative;
     text-align: center;
     color: white;
+    cursor: pointer;
+    transition: all ease-in-out 0.7s;
 }
 .center {
     position: absolute;
@@ -109,7 +121,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .categories-grid img {
     width: 100%;
     max-width: 300px;
@@ -136,8 +147,10 @@
     letter-spacing: 2px;
     font-size: 1.4em;
 }
-.box img:hover {
-    transform: scale(1.1);
+.box:hover {
+    transform: scale(1.05);
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
 }
 .vegan {
     grid-area: vegan;
@@ -178,6 +191,13 @@
         max-width: 145px;
         height: unset;
     }
+    .dish p{
+        grid-area: slogan;
+        position: relative;
+        top: 60%;
+        overflow-x: visible;
+        text-align: center;
+    }
     .dish {
         justify-items: center;
         margin: 2em 2.5em 0;
@@ -186,9 +206,10 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
         ". . three . ."
-        ". two . four ."
+        ". two slogan four ."
         "one . . . five";
     }
+    
     #one {
         grid-area: one;
         position: relative;
@@ -245,10 +266,17 @@
         ". italian random "
     }
     .italian{
-        transform: translateX(-50%);
+        transform: scale(1) translateX(50%); 
     }
     .random {
-        transform: translateX(-50%);
+        transform: scale(1) translateX(50%); 
+    }
+    .italian:hover{
+        transform: scale(1.05) translateX(50%);
+    }
+    
+    .random:hover{
+        transform: scale(1.05) translateX(50%);
     }
 }
 
@@ -270,6 +298,16 @@
     }
     .random {
         transform: unset;
+    }
+    .italian:hover{
+        transform: scale(1.05);
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
+    }
+    .random:hover{
+        transform: scale(1.05);
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
     }
 
 
@@ -295,9 +333,17 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
         ". . three . ."
-        ". two . four ."
+        ". two slogan four ."
         "one . . . five";
     }
+    .dish p{
+        position: relative;
+        top: 80%;
+        margin-left: -1em;
+        text-align: center;
+        font-size: 1.1em;
+    }
+   
     #one {
         position: relative;
         top:-20px;
@@ -334,8 +380,5 @@
 
     .categories-grid img {
         box-shadow: 2px 1px 10px 2px #c0c0c0;
-    }
-    .categories-grid:hover{
-        transform: scale(1.1);
     }
 }

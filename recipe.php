@@ -3,7 +3,7 @@ include "includes/database.php";
  $id = $_GET['id'];
  
  //Perform Database Query
- $query = "SELECT * FROM recipe WHERE `id` LIKE '$id'"; //returns everything from "recipe" db - it works
+ $query = "SELECT * FROM recipes WHERE `id` LIKE '$id'"; //returns everything from "recipe" db - it works
  $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
 
 
@@ -138,8 +138,8 @@ $each = explode("*", $step);
 
         <!-- INSTRUCTION -->
 
-        <div class="instruction">
-            <h1>Instruction</h1>
+        <div class="ingredient">
+            <h1>Instructions</h1>
         </div>
         
         <div id="exp-col">

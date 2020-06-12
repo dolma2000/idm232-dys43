@@ -6,6 +6,7 @@ input, button, submit { border:none; padding: 0;
     background: none } 
 html {
     font-family: quicksand;
+    overflow-x: hidden;
     
 }
 body{

@@ -180,9 +180,10 @@
     .desktop-nav {
         display: block;
         position: absolute;
+        z-index: 10;
         top: 0;
         right: 0;
-        margin: 2.4em 1em;
+        margin: 2.4em 0.5em;
         text-align: center;
     }
     .desktop-nav a {
@@ -192,15 +193,15 @@
         color: #300D3C;
         font-weight:100;
         letter-spacing: 1px;
-        margin: 0 0.5em;
-        padding: 0.5em 0.5em;
+        margin: 0 0.2em;
+        padding: 0.5em 0.15em;
         transition: all ease 0.5s;
         border-radius: 40px;
     }
     .desktop-nav a:hover {
         background-color:hsla(155, 49%, 81%, 0.767);
         border-radius: 40px;
-        padding: 0.5em 0.5em;
+        padding: 0.5em 0.15em;
     }
 
 }
@@ -218,6 +219,11 @@
     }
     .desktop-nav a {
         font-size: 1.2em;
+        margin: 0 0.3em;
+        padding: 0.5em 0.5em;
+    }
+    .desktop-nav a:hover {
+        padding: 0.5em 0.5em;
     }
  
 }

@@ -5,25 +5,31 @@ include "includes/database.php";
 if (isset($_POST['submit'])) {
     //if form is submitted
     $search= $_POST['search'];
-// if ($search->num_row==0) {
-//     redirect_to("error.php");
-// }
 }
 
-  //Perform Database Query
-$query = 
-"SELECT * FROM recipe 
-WHERE lower(`tle`) LIKE '%{$search}%'
-OR lower(`description`) LIKE '%{$search}%'
-OR lower(`type`) LIKE '%{$search}%'
-ORDER BY `id` ASC";
-
-$result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
+ //Perform Database Query
+ $query = 
+ "SELECT * FROM recipes 
+ WHERE lower(`tle`) LIKE '%{$search}%'
+ OR lower(`description`) LIKE '%{$search}%'
+ OR lower(`type`) LIKE '%{$search}%'
+ ORDER BY `id` ASC"; 
  
-// Check there are no errors with our SQL statement
- if (!$result) {
-    die ("Database query failed.");
+ $result = mysqli_query($connection, $query); //connecting database and bringing what I asked for in "$query"
+ 
+ // Check there are no errors with our SQL statement
+  if (!$result) {
+     die ("Database query failed.");
+ }
+ 
+ function redirect_to($location){
+     header('Location:'.$location);
+ }
+ 
+ if ($result->num_rows==0) {
+     redirect_to("error.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +92,9 @@ $search = $_POST['search']
 <?php mysqli_free_result($result); ?>
 
 </div>
+
 <?php include "includes/_footer.php";?> 
+
 <script src="main.js"></script>
 
 <?php

@@ -2,6 +2,9 @@
 .menubar {
     display: none;
 }
+.box input[value] {
+    display: hidden;
+}
 
 
 /* UPDATED SEARCH RESULTS RECUPE */

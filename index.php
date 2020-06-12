@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="hamburgers-master/dist/hamburgers.css">
+   <link rel="stylesheet" href="hamburgers-master/dist/hamburgers.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css"> 
 </head>
 <body>
 
@@ -47,7 +47,7 @@
 
 <div class="desktop-nav">
         <a href="searchresults.php" class="line">All Recipes</a>
-        <a href="FAQ.html" class="line">Help</a> 
+        <a href="FAQ.php" class="line">Help</a> 
     </div>
 
     
@@ -81,6 +81,7 @@
         <img id="three" src="IDM232-assets/circle_img/0101_2PV1_Broccoli-Bucatini-Fettuccine_97230_SQ_hi_res copy.png" alt="dish">
         <img id="four" src="IDM232-assets/circle_img/0108_FPF_Barramundi_0304_WEB_SQ_hi_res copy.png" alt="dish">
         <img id="five" src="IDM232-assets/circle_img/0108_2PV1_Roasted-Pepper-Pasta_97907_SQ_hi_res copy.png" alt="dish">
+        <p>Make Every Bite Count!</p>
     </div>
         
 
@@ -90,45 +91,67 @@
         <div class="logo">
                 <img src="images/natsu_logo_text_whiteborder.png" alt="">
         </div>
+        
         <div class="main-background">
             
             <div class="searchbar">
-                <form action="">
-                    <button type="submit"><img src="images/search_icon.svg" alt=""></button>
-                    <input type="text" placeholder="Pasta, Vegan, Easy, Spicy…" name="search">
+                <form action="searchresults.php" method="post">
+                    <button type="submit" name="submit" value="Submit"><img src="images/search_icon.svg" alt=""></button>
+                    <input type="text" placeholder="Pasta, Vegan, Chicken..." name="search" value="">
                 </form>
             </div>
             <div class="categories-grid">
-                <a href="category/vegan.php"><div class="box vegan">                    
-                    <img src="images/homepage/vegan.png" alt="vegan">
-                    <div class="center"><p>VEGAN</p></div>
-                </div></a>
-                <a href="error.html"><div class="box dinner"> 
-                    <img src="images/homepage/dinner.png" alt="dinner">
-                    <div class="center"><p>DINNER</p></div>  
-                </div></a>
-                <div class="box salad">                    
-                    <img src="images/homepage/salad.png" alt="salad">
-                    <div class="center"><p >SALAD</p></div>
+                <div class="box">
+                    <form action="category.php" method="post">
+                        <button type="submit" name="category" value="Submit"><img src="images/homepage/vegan.png" alt="vegan"></button>
+                        <div class="center"><p>VEGAN</p></div>
+                        <input type="hidden" name="category" value="vegan">
+                    </form>
                 </div>
-                <div class="box potluck">                    
-                    <img src="images/homepage/potluck.png" alt="potluck">
-                    <div class="center"><p >POTLUCK</p></div>
+                <div class="box">
+                    <form action="category.php" method="post">
+                        <button type="submit" name="category" value="Submit"><img src="images/homepage/dinner.png" alt="dinner"></button>
+                        <div class="center"><p>DINNER</p></div>
+                        <input type="hidden" name="category" value="dinner">
+                    </form>
                 </div>
-                <div class="box asian">                    
-                    <img src="images/homepage/asian.png" alt="asian">
-                    <div class="center"><p >ASIAN</p></div>
+                <div class="box">
+                    <form action="category.php" method="post">
+                        <button type="submit" name="category" value="Submit"><img src="images/homepage/salad.png" alt="salad"></button>
+                        <div class="center"><p>SALAD</p></div>
+                        <input type="hidden" name="category" value="salad">
+                    </form>
                 </div>
-                <div class="box mexican">                    
-                    <img src="images/homepage/mexican.png" alt="mexican">
-                    <div class="center"><p >MEXICAN</p></div>
+                <div class="box">
+                    <form action="category.php" method="post">
+                        <button type="submit" name="category" value="Submit"><img src="images/homepage/potluck.png" alt="dinner"></button>
+                        <div class="center"><p>POTLUCK</p></div>
+                        <input type="hidden" name="category" value="potluck">
+                    </form>
                 </div>
-                <div class="box italian">                    
-                    <img src="images/homepage/italian.png" alt="italian">
-                    <div class="center"><p >ITALIAN</p></div>
+                <div class="box">
+                    <form action="category.php" method="post">
+                        <button type="submit" name="category" value="Submit"><img src="images/homepage/asian.png" alt="asian"></button>
+                        <div class="center"><p>ASIAN</p></div>
+                        <input type="hidden" name="category" value="asian">
+                    </form>
                 </div>
-                <a href="recipe_random.php"><div class="box random">                    
-                    <img src="images/homepage/random.png" alt="italian">
+                <div class="box">
+                    <form action="category.php" method="post">
+                        <button type="submit" name="category" value="Submit"><img src="images/homepage/mexican.png" alt="mexican"></button>
+                        <div class="center"><p>MEXICAN</p></div>
+                        <input type="hidden" name="category" value="mexican">
+                    </form>
+                </div>
+                <div class="box italian">
+                    <form action="category.php" method="post">
+                        <button type="submit" name="category" value="Submit"><img src="images/homepage/italian.png" alt="italian"></button>
+                        <div class="center"><p>ITALIAN</p></div>
+                        <input type="hidden" name="category" value="italian">
+                    </form>
+                </div>
+                <a href="random_recipe.php"><div class="box random">                    
+                    <img src="images/homepage/random.png" alt="random">
                 </div></a>
 
             </div>
